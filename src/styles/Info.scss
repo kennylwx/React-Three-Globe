@@ -1,6 +1,9 @@
+$p-dim: 128px;
+
 .info-display-bg {
   background-color: transparent;
   position: absolute;
+  padding: 0 24px 0;
   bottom: 1px;
   width: 100%;
   height: 100%;
@@ -8,28 +11,33 @@
   display: flex;
   flex-direction: column;
 
+  align-items: center;
+
   overflow-y: scroll;
+  box-sizing: border-box;
 
   .info-display-container {
-    background-color: rgba(7, 13, 29, 0.842);
-    margin: 50vh auto 0;
+    background-color: rgba(0, 0, 0, 0.774);
+    color: rgb(194, 194, 194);
     border-radius: 12px 12px 0 0;
 
-    padding: 92px 24px;
+    margin: 60vh 0 0;
+    padding: 92px 24px 0;
+    position: relative;
+
+    box-sizing: border-box;
 
     max-width: 560px;
     width: 100%;
-
-    min-height: 2500px;
+    min-height: calc(100vh - #{$p-dim});
 
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
 
-    position: relative;
-
-    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
-    $p-dim: 128px;
+    box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 2px, rgba(0, 0, 0, 0.07) 0px 2px 4px,
+      rgba(0, 0, 0, 0.07) 0px 4px 8px, rgba(0, 0, 0, 0.07) 0px 8px 16px,
+      rgba(0, 0, 0, 0.07) 0px 16px 32px, rgba(0, 0, 0, 0.07) 0px 32px 64px;
 
     .info-display-header {
       height: $p-dim;

@@ -22,8 +22,8 @@ const Earth: React.FC = () => {
     if (earthRef != null) {
       if (earthRef.current != null) {
         if (elapsedTime > 1) {
-          (earthRef.current! as Mesh).rotation.y += 0.0001;
-          (cloudsRef.current! as Mesh).rotation.y += 0.0001;
+          (earthRef.current! as Mesh).rotation.y -= 0.00005;
+          (cloudsRef.current! as Mesh).rotation.y -= 0.00005;
         }
       }
     }
