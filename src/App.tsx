@@ -1,14 +1,18 @@
-import React from 'react';
-import { Canvas } from 'react-three-fiber';
-import Controls from './components/Controls';
-import Scene from './components/Scene';
-import './App.css';
+import React, { Suspense } from 'react';
+import { Canvas } from '@react-three/fiber';
+import Earth from './components/Earth';
+import Info from './components/Info';
+import './styles/App.scss';
 
 const App: React.FC = () => (
-  <Canvas>
-    <Scene />
-    <Controls />
-  </Canvas>
+  <>
+    <Canvas>
+      <Suspense fallback={null}>
+        <Earth />
+      </Suspense>
+    </Canvas>
+    <Info />
+  </>
 );
 
 export default App;
